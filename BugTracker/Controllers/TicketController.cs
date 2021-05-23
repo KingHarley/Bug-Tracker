@@ -14,14 +14,15 @@ namespace BugTracker.Controllers
     {
         
 
-        public string Index()
+        public IActionResult Index()
         {
-            return "Hello this is the index method '/'";
+            return View();
         }
 
-        public string Welcome()
+        public IActionResult NewTicket(string newTicket)
         {
-            return "Welcome this is the welcome method /Welcome";
+            ViewData["newTicket"] = newTicket;
+            return View();
         }
     }
 }

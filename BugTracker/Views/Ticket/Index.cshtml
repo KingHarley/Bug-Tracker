@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Ticket";
+}
+
+<div class="text-center">
+    <h1 class="display-4">New Ticket</h1>
+    
+    <form asp-asp-controller="Ticket" asp-action="NewTicket" method="post">
+        <input class="form-group" type="text" placeholder="Text" autofocus autocomplete="off" name="newTicket">
+        <input type="submit" value="Submit">
+    </form>
+</div>
