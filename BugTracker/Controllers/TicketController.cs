@@ -22,6 +22,7 @@ namespace BugTracker.Controllers
         public IActionResult NewTicket(string newTicket)
         {
             ViewData["newTicket"] = newTicket;
+            ViewData["Title"] = newTicket;
             return View();
         }
     }
