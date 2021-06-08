@@ -5,12 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using BugTracker.Models;
 
-    public class MvcTicketContext : DbContext
+    namespace BugTracker.Data
     {
-        public MvcTicketContext (DbContextOptions<MvcTicketContext> options)
-            : base(options)
+        public class MvcTicketContext : DbContext
         {
-        }
+            public MvcTicketContext (DbContextOptions<MvcTicketContext> options)
+                : base(options)
+            {
+            }
 
-        public DbSet<BugTracker.Models.Ticket> Ticket { get; set; }
+            public DbSet<BugTracker.Models.Ticket> Ticket { get; set; }
+        }
     }
+    
